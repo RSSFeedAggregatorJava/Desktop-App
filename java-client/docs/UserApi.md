@@ -25,7 +25,7 @@ Login with email and password
 
 
 UserApi apiInstance = new UserApi();
-Credentials credentials = new Credentials(); // Credentials | credentials
+Credentials1 credentials = new Credentials1(); // Credentials1 | credentials
 try {
     InlineResponse200 result = apiInstance.usersLoginPost(credentials);
     System.out.println(result);
@@ -39,7 +39,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **credentials** | [**Credentials**](Credentials.md)| credentials |
+ **credentials** | [**Credentials1**](Credentials1.md)| credentials |
 
 ### Return type
 
@@ -108,7 +108,7 @@ Signup with email and password - application/json
 
 
 UserApi apiInstance = new UserApi();
-Credentials1 credentials = new Credentials1(); // Credentials1 | credentials
+Credentials credentials = new Credentials(); // Credentials | credentials
 try {
     InlineResponse200 result = apiInstance.usersSignupPost(credentials);
     System.out.println(result);
@@ -122,7 +122,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **credentials** | [**Credentials1**](Credentials1.md)| credentials |
+ **credentials** | [**Credentials**](Credentials.md)| credentials |
 
 ### Return type
 

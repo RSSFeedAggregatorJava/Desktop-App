@@ -54,7 +54,7 @@ No authorization required
 
 <a name="feedsFeedIdGet"></a>
 # **feedsFeedIdGet**
-> Feed feedsFeedIdGet(feedId)
+> List&lt;InlineResponse2002&gt; feedsFeedIdGet(feedId)
 
 Find a feed and retrieve its articles
 
@@ -80,7 +80,7 @@ api_key.setApiKey("YOUR API KEY");
 FeedApi apiInstance = new FeedApi();
 Long feedId = 789L; // Long | ID of feed that needs to be fetched
 try {
-    Feed result = apiInstance.feedsFeedIdGet(feedId);
+    List<InlineResponse2002> result = apiInstance.feedsFeedIdGet(feedId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FeedApi#feedsFeedIdGet");
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Feed**](Feed.md)
+[**List&lt;InlineResponse2002&gt;**](InlineResponse2002.md)
 
 ### Authorization
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 
 <a name="feedsGet"></a>
 # **feedsGet**
-> List&lt;Feed&gt; feedsGet()
+> List&lt;InlineResponse2001&gt; feedsGet()
 
 Get all feeds subscribed by currend user
 
@@ -132,7 +132,7 @@ api_key.setApiKey("YOUR API KEY");
 
 FeedApi apiInstance = new FeedApi();
 try {
-    List<Feed> result = apiInstance.feedsGet();
+    List<InlineResponse2001> result = apiInstance.feedsGet();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FeedApi#feedsGet");
@@ -145,7 +145,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List&lt;Feed&gt;**](Feed.md)
+[**List&lt;InlineResponse2001&gt;**](InlineResponse2001.md)
 
 ### Authorization
 
