@@ -1,0 +1,33 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" build-on-make="true" name="RssFeedAggregator">
+    <output-path>$PROJECT_DIR$/out/artifacts/RssFeedAggregator</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="RFA.Main" />
+        <option name="description" value="" />
+        <option name="height" value="720" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+        <option name="width" value="1280" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="RssFeedAggregator.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="RssFeedAggregator" />
+        <element id="file-copy" path="$PROJECT_DIR$/icon.png" />
+      </element>
+      <element id="directory" name="lib">
+        <element id="library" level="project" name="com.google.code.gson:gson:2.8.0" />
+        <element id="library" level="project" name="com.squareup.okhttp:okhttp:2.7.1" />
+        <element id="library" level="project" name="com.squareup.okhttp:logging-interceptor:2.7.1" />
+        <element id="library" level="project" name="joda-time:joda-time:2.9.7" />
+        <element id="library" level="project" name="io.swagger:swagger-annotations:1.5.12" />
+      </element>
+    </root>
+  </artifact>
+</component>

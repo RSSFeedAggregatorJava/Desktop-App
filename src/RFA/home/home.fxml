@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RFA.home.Controller">
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <AnchorPane BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="_feedTitle" alignment="CENTER" contentDisplay="CENTER" text="Welcome" textAlignment="JUSTIFY" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <ListView fx:id="_articlesList" onKeyReleased="#articleSelectionKeyEvent" onMouseClicked="#articleSelectionMouseEvent" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+            <BorderPane BorderPane.alignment="CENTER">
+               <top>
+                  <VBox BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane>
+                           <children>
+                              <Label fx:id="_articleTitle" alignment="CENTER" contentDisplay="CENTER" textAlignment="JUSTIFY" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <HBox spacing="5.0">
+                           <children>
+                              <Label minWidth="25.0" text="Date" />
+                              <Label minWidth="3.0" text=":" />
+                              <VBox>
+                                 <children>
+                                    <Label fx:id="_articleDate" wrapText="true" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox spacing="5.0">
+                           <children>
+                              <Label minWidth="37.0" text="Author" />
+                              <Label minWidth="3.0" text=":" />
+                              <VBox>
+                                 <children>
+                                    <Label fx:id="_articleAuthor" wrapText="true" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox spacing="5.0">
+                           <children>
+                              <Label minWidth="61.0" text="Description" />
+                              <Label minWidth="3.0" text=":" />
+                              <VBox>
+                                 <children>
+                                    <Label fx:id="_articleDescription" wrapText="true" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" />
+                     </padding>
+                  </VBox>
+               </top>
+               <center>
+                  <WebView fx:id="_articleView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+         </bottom>
+      </BorderPane>
+   </center>
+   <left>
+      <BorderPane prefHeight="693.0" prefWidth="226.0" BorderPane.alignment="CENTER">
+         <top>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" text="Feeds" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <HBox>
+                     <children>
+                        <TextField fx:id="_feedToAdd" HBox.hgrow="ALWAYS" />
+                        <Button mnemonicParsing="false" onAction="#addFeedButtonEvent" text="Add" />
+                        <Button mnemonicParsing="false" onAction="#removeFeedButtonEvent" text="X">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <ListView fx:id="_feedsList" onKeyReleased="#feedSelectionKeyEvent" onMouseClicked="#feedSelectionMouseEvent" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+            <VBox minHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="179.0" text="Details" textAlignment="JUSTIFY" underline="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Label minWidth="48.0" text="Category">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label minWidth="3.0" text=":">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <VBox>
+                           <children>
+                              <Label fx:id="_feedCategory" wrapText="true" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Label minWidth="61.0" text="Description">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label minWidth="3.0" text=":">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <VBox HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label fx:id="_feedDescription" wrapText="true" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Label minWidth="52.0" text="Language">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label minWidth="3.0" text=":">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <VBox>
+                           <children>
+                              <Label fx:id="_feedLanguage" wrapText="true" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Label minWidth="22.0" text="Link">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label minWidth="3.0" text=":">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <VBox>
+                           <children>
+                              <Hyperlink fx:id="_feedLink" alignment="TOP_LEFT" onAction="#feedLinkEvent" wrapText="true" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </padding>
+            </VBox>
+         </bottom>
+      </BorderPane>
+   </left>
+   <bottom>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <HBox spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#logoutButtonEvent" text="Logout" />
+                  <Label fx:id="_accountEmail">
+                     <padding>
+                        <Insets top="4.0" />
+                     </padding>
+                  </Label>
+                  <TextField editable="false" visible="false" HBox.hgrow="ALWAYS" />
+                  <CheckBox fx:id="_bigArticle" disable="true" mnemonicParsing="false" onAction="#toggleBigArticle" text="BigArticle" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
